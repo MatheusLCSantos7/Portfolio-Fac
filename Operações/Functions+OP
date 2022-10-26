@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tic_Tac_Toe
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+			Console.WriteLine("Digite um número a ser calculado");
+			int a = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Digite um número a ser calculado");
+			int b = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Digite qual operação deseja fazer \r\n1 - Adição \r\n2 - Subtração\r\n3 - Multiplicação\r\n4 - Divisão \n");
+			int op = int.Parse(Console.ReadLine());
+
+			switch (op)
+			{
+				case 1:
+					opera1(a, b);
+					Console.WriteLine(opera1(a, b));
+					break;
+				case 2:
+					opera2(a, b);
+					Console.WriteLine(opera2(a, b));
+					break;
+				case 3:
+					opera3(a, b);
+					Console.WriteLine(opera3(a, b));
+					break;
+				case 4:
+					opera4(a, b);
+					Console.WriteLine(opera4(a, b));
+					break;
+			}
+			Console.ReadKey();
+		}
+			static int opera1(int x, int y)
+			{
+			return x + y;
+			}
+			static int opera2(int x, int y)
+			{
+				return x - y;
+			}
+
+			static int opera3(int x, int y)
+			{
+				return x * y;
+			}
+	
+			static int opera4(int x, int y)
+			{
+				return x / y;
+			}
+	}
+}
